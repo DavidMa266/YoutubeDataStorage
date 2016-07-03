@@ -1,0 +1,12 @@
+{
+  "manifest_version": 1,
+
+  "name": "Youtube App Thing",
+  "description": "This extension is meant to store data",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "https://youtube.com/*"
+  ]
+}
