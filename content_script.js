@@ -19,7 +19,7 @@ function add_like_button()
 	{
 		title = document.getElementById("eow-title").innerHTML;
 		description = document.getElementById("eow-description").innerHTML;
-    var url = window.location.href;
+    var url = get_video_id();
     console.log(url);
     console.log("We are liking this video")
 
@@ -37,7 +37,7 @@ function add_like_button()
 
 function display_information(){
   //if(document.getElementsByTagName("video").length == 0){
-    var url = window.location.href;
+    var url = get_video_id();
     chrome.storage.sync.get(url, function(obj)
     {
       console.log("We are retrieving relevant information")
