@@ -10,11 +10,17 @@
     "default_popup": "popup.html",
     "default_title": "Access List"
   },
+
   "permissions": [
     "storage",
-    "*://*.youtube.com/*",
-    "webNavigation"
+    "*://*.youtube.com/*"
   ],
+
+  
+  "background": {
+      "scripts": ["background.js"]
+  },
+  
    "content_scripts": [
     {
       "matches":  ["*://*.youtube.com/*"],
