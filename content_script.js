@@ -1,7 +1,9 @@
-	var button = document.getElementsByClassName("_mqb _mod")
-	console.log(button)
-	console.log(button[0])
-	button[0].addEventListener("click", function() {
-		alert("Testing ");
-		console.log("Hello");
+var button;
+$(document).ready(function()
+{
+	button = document.getElementsByClassName("like-button-renderer-like-button-unclicked");
+	button[0].addEventListener("click", function()
+	{
+		alert("Clicked Like!");
+	})
 });
