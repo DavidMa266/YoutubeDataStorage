@@ -12,7 +12,8 @@
   },
   "permissions": [
     "storage",
-    "*://*.youtube.com/*"
+    "*://*.youtube.com/*",
+    "webNavigation"
   ],
    "content_scripts": [
     {
