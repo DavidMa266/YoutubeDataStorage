@@ -27,7 +27,7 @@
       "css":      ["style_sheet.css"],
       "js":       ["jquery-2.1.4.js",
                   "content_script.js"],
-      "run_at":   "document_end"
+      "run_at":   "document_start"
     }
   ]
 }
