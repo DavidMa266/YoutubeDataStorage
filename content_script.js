@@ -46,6 +46,17 @@ function display_information(){
       var retrieved_description = obj[url].d;
       console.log("Getting object");
       console.log(retrieved_title + "\n" + retrieved_description);
+      var title_div = document.createElement("div");
+      var descr_div = document.createElement("div");
+
+
+      var title_content = document.createTextNode(retrieved_title);
+      var descr_content = document.createTextNode(retrieved_description);
+
+      title_div.appendChild(title_content);
+      descr_div.appendChild(descr_content);
+      document.body.appendChild(title_div);
+      document.body.appendChild(descr_div);
     });
  // }
 }
