@@ -1,4 +1,4 @@
-function get_video_id()
+function parse_url()
 {
   var title = window.location.href;
   if(title.indexOf("/watch?v=") >=0)
@@ -9,6 +9,12 @@ function get_video_id()
 
 }
 
+function parse_description()
+{
+  description = document.getElementById("eow-description").innerHTML;
+}
+
+
 
 function add_like_button()
 {
@@ -17,9 +23,10 @@ function add_like_button()
 	button = document.getElementsByClassName("like-button-renderer-like-button-unclicked");
 	button[0].addEventListener("click", function()
 	{
+    var url = parse_url();
+
 		title = document.getElementById("eow-title").innerHTML;
-		description = document.getElementById("eow-description").innerHTML;
-    var url = get_video_id();
+		description = parse_description();
     console.log(url);
     console.log("We are liking this video")
 
@@ -37,7 +44,7 @@ function add_like_button()
 
 function display_information(){
   //if(document.getElementsByTagName("video").length == 0){
-    var url = get_video_id();
+    var url = parse_url();
     chrome.storage.sync.get(url, function(obj)
     {
       console.log("We are retrieving relevant information")
