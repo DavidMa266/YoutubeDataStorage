@@ -1,3 +1,8 @@
+chrome.identity.getAuthToken({"interactive": true}, function(token)
+	{
+		alert("Authenticating");
+		console.log("does something with authToken");
+	});
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {

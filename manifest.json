@@ -13,11 +13,12 @@
 
 	"permissions": [
 		"storage",
-		"*://*.youtube.com/*"
+		"*://*.youtube.com/*",
+    "identity"
 	],
 	
 	"background": {
-			"scripts": ["background.js"]
+			"scripts": ["background.js", "client.js"]
 	},
 	
 	"content_scripts": [
@@ -30,7 +31,7 @@
 		}
 	],
   "oauth2":  {
-    "client_id": "678156302413-dkcidgkpg4dfg327qqn6e6lumvldu1p3.apps.googleusercontent.com",
+    "client_id": "678156302413-ktclnscuu17pedpa276hqbsobmd39ril.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/drive.appdata"
     ]
